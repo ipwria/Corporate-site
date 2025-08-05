@@ -1,0 +1,733 @@
+/*fonts*/
+
+@import "fonts.css";
+
+
+/*Reset Css*/
+
+@import"reset.css";
+
+/*Css*/
+a{
+    cursor: default;
+}
+:root {
+    --brown: #3E2723;
+
+
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+.container {
+    width: 100%;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+  }
+
+body {
+    line-height: 1.6;
+    font-size: 1.6rem;
+    font-family: "Roboto Regular" sans-serif;
+    background-color: #EFEBE9;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*
+
+--Component class--
+
+*/ 
+
+.btn{
+    display: block;
+    border-radius: 10rem;
+    color: #fff;
+    background-color: #e0e0e0;
+    width: 20rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Roboto Medium";
+}
+
+/*
+
+--App style--
+
+*/ 
+
+
+
+.header {
+    background: linear-gradient(rgba(59, 55, 53, 0.5), rgba(59, 55, 53, 0.5)), url(../images/header-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 85vh;
+    border-radius: 0 0 10rem 10rem;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem ;
+}
+.header_menu-right{
+    display: flex;
+    align-items: center;
+}
+
+/*
+
+--app logo--
+
+*/ 
+
+.app-logo {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    margin-right: 3rem;
+
+
+}
+
+.app-logo__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+}
+
+/*
+
+--Main menu--
+
+*/ 
+
+.menu {
+    display: none;
+
+}
+
+.menu-item {}
+
+.menu-link {
+    color: #E0E0E0;
+    margin-right: 1.5rem;
+    transition: color 100ms ease-in-out;
+}
+.menu-link:hover{
+    color: #fff
+}
+.menu-link_active{
+    color: #fff;
+     position: relative;
+     z-index: 1;
+    
+}
+.menu-link_active::before{
+    content: '   ';
+    position: absolute;
+    top: 7px;
+    width: 4rem;
+    height: 0.3rem;
+    border-radius: 10rem;
+    background-color: goldenrod;
+    transform: rotate(45deg);
+    z-index: -1;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+/*
+
+--Navigation menu--
+
+*/ 
+
+.nav-menu {
+    position: fixed;
+    background-color: #3E2723;
+    top: 0;
+    bottom: 0;
+    left: -25rem;
+    width: 25rem;
+    transition: all 250ms ease-in-out;
+    padding: 7rem 3rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+}
+.nav-menu--open{
+    left:0;
+}
+.nav-menu_title{
+    color: #fff;
+    font-size: 2rem;
+    font-family: "Archivo";
+    border-bottom: 1px solid #fff;
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/*
+
+--Mobile menu--
+
+*/ 
+
+.mobile-menu {
+    
+}
+
+.mobile-menu__item {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.mobile-menu__link {
+    color: #D7CCC8;
+}
+
+.mobile-header_links {
+    display: flex;
+    margin-top: 7rem;
+}
+
+.mobile-header_link {
+    color: #3E2723;
+    border-radius: 1rem;
+    display: block;
+    padding: 1rem;
+    flex-basis: 50%;
+    text-align: center;
+    background-color: #D7CCC8;
+}
+
+.mobile-header_link__border {
+    margin-left: 3px;
+}
+
+.header-links {
+   display: none;
+  
+}
+
+.header-link {
+    color: #fff;
+    font-family: "Roboto Medium";
+ 
+}
+
+.header-link_border {
+    border: 1px solid #fff;
+    padding: 1rem 2rem;
+    border-radius: 10rem;
+    margin-left: 2rem;
+    transition: all 100ms ease-in-out;
+}
+.header-link_border:hover{
+    background-color: #fff;
+    color: black;
+}
+
+/*
+
+--Nav btn--
+
+*/ 
+
+.nav__btn {
+    background-color: #fff;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-btn_line {
+    display: block;
+    width: 2.5rem;
+    height: 0.3rem;
+    border-radius: 2rem;
+    background-color: var(--brown);
+    position: relative;
+    transition: all 250ms ease-in-out;
+}
+
+.nav-btn_line::before,
+.nav-btn_line::after {
+    content: '   ';
+    position: absolute;
+    width: 2.5rem;
+    height: 0.3rem;
+    border-radius: 2rem;
+    background-color: var(--brown);
+    transition: all 250ms ease-in-out;
+}
+
+.nav-btn_line::before {
+    top: -0.8rem;
+
+}
+
+.nav-btn_line::after {
+    top: 0.8rem;
+
+}
+.nav__btn--open .nav-btn_line{
+    background-color: transparent;
+}
+.nav__btn--open .nav-btn_line::before{
+     transform: translateY(8px) rotate(45deg);
+    
+}
+.nav__btn--open .nav-btn_line::after{
+     transform: translateY(-8px) rotate(-45deg); 
+    
+}
+
+/*
+
+--Header content--
+
+*/ 
+ 
+.header-content{
+    margin-top: 6rem;
+    text-align: center;
+    color: #fff;
+
+}
+.header-content__title{
+    font-family: "Archivo";
+    font-size: 4.5rem;
+    max-width: 35rem;
+    line-height: 1.2;
+    margin: 0 auto 3rem auto;
+
+}
+.header-content__caption{
+    font-size: 1.8rem;
+    max-width: 22rem;
+    margin: 0 auto 2rem auto;
+
+}
+.hedear-content__link{
+    background-color: var(--brown);
+
+}
+
+/*
+--main--
+*/
+
+.main{
+
+}
+
+/*
+--main services--
+*/
+
+.services{
+    margin-top: -11rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+    align-items: center;
+}
+
+.service{
+    background-color: #fff;
+    margin-bottom: 2rem;
+    width: 27rem;
+    height: 26rem;
+    border-radius: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4rem;
+    flex-grow: 1;
+    margin: 0.5rem;
+}
+.service-img{
+    display: block;
+    width: 8.2rem;
+    height: 7.2rem;
+    
+
+}
+.service-title{
+    font-family: "Roboto Medium";
+    font-size: 2rem;
+    margin: 1rem 0 0.2rem;
+
+}
+.service-caption{
+    font-family: "Roboto Regular";
+}
+
+/*
+--sample--
+*/
+
+
+.Sample{
+    text-align: center;
+    padding: 6rem 0;
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+    position: relative;
+}
+.Sample::before,
+.Sample::after{
+    content: " ";
+    position: absolute;
+    width: 60rem;
+    height: 60rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -2;
+    
+}
+.Sample::after{
+    background-image: url(../images/svgs/shape1.svg);
+    right: -49rem;
+    top: -10rem;
+}
+.Sample::before{
+    background-image: url(../images/svgs/shape2.svg);
+    left: -49rem;
+    bottom: 40rem;
+}
+.Sample-svg{
+    width: 8rem;
+    height: 8rem;
+    margin-top: 2rem;
+}
+.Sample-title{
+    font-family: "Roboto Medium";
+    font-size: 3rem;
+    max-width: 36rem;
+    margin: 0 auto;
+
+}
+.Sample-works{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 6rem;
+  
+}
+.Sample-work{
+    background-color: #fff;
+    border-radius: 2rem;
+    padding: 4rem;
+    margin-bottom: 2rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    width: 27rem;
+    flex-grow: 1;
+
+
+}
+.Sample-work_banner{
+    position: relative;
+    border-radius: 2rem;
+    height: 18rem;
+    overflow: hidden;
+
+}
+.Sample-work_img{
+   
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.Sample-like{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1.5rem;
+
+}
+.Sample-like_icon{
+
+}
+.Sample-price{
+    background-color: #fff;
+    position: absolute;
+    bottom: -1rem;
+    padding: 0.5rem;
+    border-radius: 1.5rem;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    width: 15rem;
+
+
+}
+.Sample-price_text{
+    color: #8D6E63;
+    text-align: center;
+
+
+}
+.Sample-work_title{
+    font-family: "Roboto Medium";
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+
+}
+.Sample-work_caption{
+    font-family: "Roboto Regular";
+    margin-bottom: 3rem;
+    min-height: 8rem;
+
+}
+.Sample-work_btn{
+    color: #8D8D8D;
+    background-color: rgba(141,141,141,0.1);
+
+}
+.samples-btn{
+    color: #3E2723;
+    border: 1px solid #3E2723;
+    background-color: transparent;
+    margin-top: 3rem;
+    transition: all 100ms ease-in-out;
+}
+.samples-btn:hover{
+    color: #EFEBE9;
+    border: 1px solid #EFEBE9;
+    background-color: #3E2723;
+   
+
+}
+
+/*
+--news--
+*/
+
+.news{
+    background-color: #8D6E63;
+    border-radius: 2rem;
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+   
+}
+.news-left{
+
+
+}
+.news-title{
+    font-family: "Roboto Medium";
+    font-size: 3rem;
+    color: #D7CCC8;
+    min-width: 16rem;
+    margin: 1.5rem auto;
+
+}
+.news-text{
+    font-family: "Roboto Regular";
+    color: #D7CCC8;
+   
+
+}
+.news-input{
+    position: relative;
+    background-color: #D7CCC8;
+    height: 8rem;
+    border-radius: 2rem;
+    padding: 0 1rem;
+
+}
+.news-form{
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+    height: 100%;
+    width: 100%;
+    margin-top: 3rem;
+}
+.news-input_icon{
+    flex-shrink: 0;
+
+
+}
+.news-input_letter{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    color: #8D6E63;
+    padding: 0 1rem;
+
+}
+.news-submit{
+    outline: none;
+    border: none;
+    background-color: #8D6E63;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 2rem;
+    flex-shrink: 0;
+    padding: 0rem 1rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 14px #8D6E63
+    
+}
+.submit-svg{
+
+}
+.news-img{
+   
+
+}
+.img-news_large{
+    width: 100%;
+}
+
+/*
+--footer--
+*/
+
+
+.footer{
+    background-color: #8D6E63;
+    border-radius: 10rem 10rem 0 0;
+    margin-top: 18rem;
+    padding-bottom: 4rem;
+    
+}
+.footer-display{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 8rem;
+   
+}
+
+.footer-left{
+    width: 100%;
+    margin-right: 10rem;
+    
+
+}
+
+.footer-title{
+    font-family: "Archivo";
+    margin-bottom: 1rem;
+
+}
+.footer-text{
+    font-family: "Roboto Regular";
+    margin-bottom: 2rem;
+    color: #EFEBE9;
+
+}
+.footer-app{
+    display: none;
+
+}
+
+.footer-app_link{
+
+}
+.footer-app_img{
+    width: 12rem;
+  
+
+}
+.footer-right{
+    display: flex;
+    flex-wrap: wrap;
+    
+   
+}
+.footer-right_list{
+    width: 15rem;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+
+}
+.footer-right_list1{
+    font-family: "Roboto Regular";
+
+}
+.footer-right_list1__item{
+   
+
+}
+.footer-right_list1__link{
+    color: #EFEBE9;
+}
+.footer-right_list1__link:hover{
+    text-decoration: underline;
+}
+.footer_copy{
+    display: block;
+    color: #EFEBE9;
+   text-align: center;
+   padding-top: 6rem;
+}
+.svg-row{
+    background-color: #EFEBE9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 2rem;
+    position: absolute;
+    top: -3rem;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    box-shadow: -3px -4px 39px #8D6E63;
+
+}
+.svg-row_footer{
+
+}
+
+
